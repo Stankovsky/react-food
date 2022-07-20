@@ -3,25 +3,27 @@ import { Link } from 'react-router-dom';
 
 const CategoryItem = (props) => {
     const {
-      //idCategory*/,
-      strCategory,
-      strCategoryThumb,
-      strCategoryDescription
+        //idCategory*/,
+        strCategory,
+        strCategoryThumb,
+        strCategoryDescription,
     } = props;
-  return (
-    <div className="card">
-        <div className="card-image">
-          <img src={strCategoryThumb} alt={strCategory} />
-        </div>
-        <div className="card-content">
-          <span className="card-title">{strCategory}</span>
-          <p>{strCategoryDescription.slice(0, 60)}...</p>
-        </div>
-        <div className="card-action">
-          <Link to={`/category/${strCategory}`} className='btn'>Watch categories</Link>
-        </div>
-      </div>
-  )
-}
+    return (
+        <Link to={`/category/${strCategory}`} className="card">
+                <div className="card-image">
+                    <img src={strCategoryThumb} alt={strCategory} />
+                </div>
+                <div className="card-content">
+                    <span className="card-title">{strCategory}</span>
+                    <p>{strCategoryDescription.slice(0, 60)}...</p>
+                </div>
+                <div className="card-action">
+                    <button className="btn">
+                        Watch categories
+                    </button>
+                </div>
+        </Link>
+    );
+};
 
-export { CategoryItem }
+export { CategoryItem };

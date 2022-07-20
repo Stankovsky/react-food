@@ -2,7 +2,7 @@ import React from 'react'
 
 const Contact = () => {
   return (
-    <h1>Hello, from Contact page</h1>
+      <a href="https://github.com/Stankovsky/react-food" target="_blank" rel="noreferrer" className="btn">See the project on GitHub</a>
   )
 }
 

@@ -14,8 +14,9 @@ const Category = () => {
     }, [name])
        return (
         <>
+            <button className='btn' onClick={() => goBack(-1)} style={{margin: '1rem 0'}}>Back</button>
             {!meals.length ? <Preloader /> : <MealList meals={meals}/>}
-            <button className='btn' onClick={() => goBack(-1)}>Back</button>
+            <button className='btn' onClick={() => goBack(-1)} style={{margin: '1rem 0'}}>Back</button>
         </>
   )
 }

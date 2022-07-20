@@ -14,9 +14,11 @@ const Recipe = () => {
 
   return (
     <>
+    <button className="btn" onClick={() => goBack(-1)} style={{margin: '1rem 0'}}>Back</button>
         {!recipe.idMeal ? <Preloader /> : (
+            
             <div className="recipe">
-                <img src={recipe.strMealThumb} alt={recipe.strMeal} />
+                <img src={recipe.strMealThumb} alt={recipe.strMeal}/>
                 <h2>{recipe.strMeal}</h2>
                 <h5>Category: {recipe.strCategory}</h5>
                 {recipe.strArea ? <h5>Area: {recipe.strArea}</h5> : null}
@@ -53,7 +55,7 @@ const Recipe = () => {
                         <iframe
                             title={id}
                             src={`https://www.youtube.com/embed/${recipe.strYoutube.slice(-11)}`}
-                            allowfullscreen
+                            allowFullScreen
                         />
                         
                     </div>
@@ -61,7 +63,7 @@ const Recipe = () => {
                 ): null}
             </div>
         )}
-        <button className="btn" onClick={() => goBack(-1)}>Back</button>
+        <button className="btn" onClick={() => goBack(-1)} style={{margin: '1rem 0'}}>Back</button>
     </>
   )
 }
